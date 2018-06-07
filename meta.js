@@ -37,14 +37,20 @@ module.exports = {
       when: 'isNotTest',
       type: 'string',
       required: true,
-      message: 'Project name',
+      message: '项目名称',
+    },
+    appid: {
+      type: "string",
+      required: false,
+      message: "APICloud appid",
+      default: "A12345678901"
     },
     description: {
       when: 'isNotTest',
       type: 'string',
       required: false,
-      message: 'Project description',
-      default: 'A Vue.js project',
+      message: '项目描述',
+      default: 'Vue + APICloud 项目',
     },
     author: {
       when: 'isNotTest',
