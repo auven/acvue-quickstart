@@ -2,17 +2,22 @@
 
 > {{ description }}
 
-## Build Setup
+## 开发步骤
 
 ``` bash
-# install dependencies
+# 安装依赖
 npm install
 
-# serve with hot reload at localhost:8080
+# 开启服务器，默认 localhost:8080 ，实时监听文件改变，热更新
+# 开发网页
 npm run dev
+# 开发 APICloud app
+npm run dev@app
 
-# build for production with minification
+# 打包网页生辰环境代码
 npm run build
+# 打包 APICloud app 生产环境代码
+npm run build@app
 
 # build for production and view the bundle analyzer report
 npm run build --report
