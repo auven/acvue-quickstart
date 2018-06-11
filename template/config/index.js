@@ -3,6 +3,7 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
+const assetsRoot = process.env.env_platform === 'app' ? '../acapp/widget' : '../dist'
 
 module.exports = {
   dev: {
@@ -46,18 +47,18 @@ module.exports = {
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../acapp/widget/index.html'),
+    index: path.resolve(__dirname, assetsRoot + '/index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../acapp/widget'),
+    assetsRoot: path.resolve(__dirname, assetsRoot),
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: process.env.env_platform === 'app' ? './' : '/',
 
     /**
      * Source Maps
      */
 
-    productionSourceMap: true,
+    productionSourceMap: process.env.env_platform !== 'app',
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
 
